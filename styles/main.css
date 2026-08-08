@@ -14,12 +14,11 @@
 }
 
 .project-card {
-  display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
   padding: 0;
   border-radius: 0;
   width: 586px;
+  height: 670px;
   overflow: hidden;
   background: transparent;
 }
@@ -42,14 +41,15 @@
 .project-actions {
   position: relative;
   z-index: 1;
-  padding: 0 30px;
   background: transparent;
 }
 
 .project-card-copy {
-  display: flex;
+  display: flex;  
   flex-direction: column;
-  gap: 16px;
+  overflow-y: auto;
+  gap: 20px;
+  padding: 30px;
   max-width: 100%;
 }
 
@@ -78,6 +78,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  padding: 0 30px 30px 30px;
   margin-top: auto;
 }
 
