@@ -1,34 +1,50 @@
 .contact {
+  position: relative;
   margin-top: 96px;
+  min-height: 300px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+  justify-content: center;
+  gap: 18px;
   padding: 42px 44px;
   border-radius: 0;
   background: transparent;
   border: none;
+  overflow: hidden;
+  text-align: center;
 }
 
 .contact-copy {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
 }
 
 .contact-copy h2 {
   position: relative;
-  z-index: 0;
+  z-index: 2;
   font-size: 2.75rem;
+  line-height: 1.1;
   margin: 0;
 }
 
 .eclipse--contact {
   position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #6D6DFF;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.22;
+  filter: blur(55px);
   z-index: -1;
+  pointer-events: none;
 }
 
 .contact-email {
@@ -36,35 +52,44 @@
   font-size: 18px;
   line-height: 25px;
   font-weight: 700;
+  text-decoration: none;
 }
 
 .social-links {
+  position: relative;
+  z-index: 2;
   display: flex;
-  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
   flex-wrap: wrap;
+  margin-top: 4px;
 }
 
 .social-link {
-  width: 52px;
-  height: 52px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .social-link:hover,
 .social-link:focus-visible {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.08);
+  background: transparent;
+  opacity: 0.8;
 }
 
 .social-link img {
   width: 20px;
   height: 20px;
+  display: block;
 }
 
 .footer {
@@ -90,6 +115,7 @@
 
 @media (max-width: 767px) {
   .contact {
+    min-height: 300px;
     flex-direction: column;
     text-align: center;
     padding: 32px 20px;
@@ -97,5 +123,6 @@
 
   .social-links {
     justify-content: center;
+    gap: 24px;
   }
 }
