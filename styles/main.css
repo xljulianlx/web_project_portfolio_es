@@ -41,7 +41,8 @@
 .project-actions {
   position: relative;
   z-index: 1;
-  background: transparent;
+  background: #1C1C1C;
+;
 }
 
 .project-card-copy {
@@ -93,11 +94,9 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05);
+  background: transparent;
   color: var(--accent);
-  font-weight: 700;
   font-size: 16px;
   line-height: 22px;
   transition: transform 0.2s ease, background 0.2s ease;
