@@ -58,9 +58,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: var(--text);
   background-color: var(--bg);
-  background-image:
-    radial-gradient(circle at calc(100% - 180px) 120px, rgba(109, 109, 255, 0.20), transparent 28%),
-    radial-gradient(circle at calc(0% + 120px) calc(100% - 80px), rgba(76, 26, 151, 0.14), transparent 24%);
 }
 
 img {
@@ -76,10 +73,11 @@ a {
 .page-wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 120px 60px;
+  padding: 0 120px;
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: 773px 387px;
   column-gap: 40px;
@@ -88,39 +86,49 @@ a {
 }
 
 .hero-content {
+  position: relative;
   max-width: 773px;
   padding-top: 89px;
+  z-index: 1;
 }
 
 .hero-title {
   margin: 0;
-  font-family: 'Archivo Black', sans-serif;
+  font-family: Archivo Black;
+  font-weight: 400;
+  font-style: Regular;
   font-size: 72px;
-  line-height: 78px;
-  letter-spacing: -0.05em;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .hero-role {
-  margin: 18px 0 0;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 18px;
-  line-height: 26px;
+  margin: 15px 0 0;
+font-family: Open Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color:#FFFFFF80;
+
 }
 
 .hero-description {
-  margin: 28px 0 0;
+  margin: 30px 0 0;
   max-width: 773px;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.01em;
   color: #ffffff;
-  opacity: 0.8;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 30px;
   margin: 30px 0 0;
 }
 
@@ -131,7 +139,7 @@ a {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0.01em;
-  padding-bottom: 4px;
+  padding-bottom: 5px;
 }
 
 .hero-action::after {
@@ -141,7 +149,6 @@ a {
   bottom: 0;
   width: 100%;
   height: 4px;
-  border-radius: 999px;
   background: linear-gradient(90deg, var(--accent-dark), var(--accent));
 }
 
@@ -189,35 +196,34 @@ a {
 }
 
 .hero-visual {
-  position: relative;
-  width: 100%;
-  max-width: 387px;
-  height: 500px;
-  border-radius: 0;
-  overflow: hidden;
-  background: transparent;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 40px;
-  box-sizing: content-box;
+    position: relative;
+    width: 100%;
+    max-width: 387px;
+    height: 500px;
+    overflow: visible;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    transform: translateY(40px);
 }
+
 
 .eclipse {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: #6D6DFF;
-  pointer-events: none;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #6D6DFF;
+    top: 200px;
+    left: 0px;
+    opacity: 1;
+    filter: blur(200px);
+    z-index: 1;
+    pointer-events: none;
 }
 
-.eclipse--hero {
-  position: absolute;
-  left: -150px;
-  bottom: -150px;
-  z-index: 2;
-}
 
 .hero-decor {
   position: absolute;
@@ -231,13 +237,13 @@ a {
 }
 
 .hero-image {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-  position: relative;
-  display: block;
-  z-index: 1;
-  border-radius: 0;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: relative;
+    display: block;
+    z-index: 2;
+
 }
 
 @media (max-width: 1023px) {
